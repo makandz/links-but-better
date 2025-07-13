@@ -2,11 +2,12 @@
 
 This project will turn your ugly GitHub and Jira links into insightful masterpieces.
 
-**Before:**
-A standard page with plain links.
+**Before:**  
+A raw URL  
+https://github.com/owner/repo/pull/123  
 
-**After:**
-A page where links are replaced with richly formatted snippets.
+**After:**  
+:git_pr: My Cool Feature (123)
 
 ## Features
 
