@@ -1,8 +1,11 @@
 javascript: (() => {
-  const ticketIdElement =
-    document.querySelector("#issuekey-val") ||
-    document.querySelector("#key-val");
-  const ticketTitleElement = document.querySelector("#summary-val");
+  const ticketIdElement = document.querySelector(
+    'a[data-testid="issue.views.issue-base.foundation.breadcrumbs.current-issue.item"]'
+  );
+
+  const ticketTitleElement = document.querySelector(
+    'h1[data-testid="issue.views.issue-base.foundation.summary.heading"]'
+  );
 
   if (!ticketIdElement || !ticketTitleElement) {
     alert(
@@ -13,13 +16,13 @@ javascript: (() => {
 
   const ticketId = ticketIdElement.innerText;
   const ticketTitle = ticketTitleElement.innerText;
-  const jiraUrl = `https://jira.ets.mpi-internal.com/browse/${ticketId}`;
+  const jiraUrl = `${window.location.origin}/browse/${ticketId}`;
 
   const clipboardData = [
     new ClipboardItem({
       "text/plain": new Blob([ticketTitle], { type: "text/plain" }),
       "text/html": new Blob(
-        [`:jira: <a href="${jiraUrl}">(${ticketId}) ${ticketTitle}</a>`],
+        [`:jira_1: <a href="${jiraUrl}">(${ticketId}) ${ticketTitle}</a>`],
         { type: "text/html" }
       ),
     }),
