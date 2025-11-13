@@ -19,7 +19,7 @@ javascript: (() => {
     new ClipboardItem({
       "text/plain": new Blob([ticketTitle], { type: "text/plain" }),
       "text/html": new Blob(
-        [`jira_1 <a href="${jiraUrl}">(${ticketId}) ${ticketTitle}</a>`],
+        [`:jira_1: <a href="${jiraUrl}">(${ticketId}) ${ticketTitle}</a>`],
         { type: "text/html" }
       ),
     }),
