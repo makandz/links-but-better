@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (breadcrumbList && ticketIdElem && ticketTitleElem && !document.querySelector("#copy-ticket-info")) {
       const ticketId = ticketIdElem.innerText;
       const ticketTitle = ticketTitleElem.innerText;
-      const jiraUrl = `https://jira.ets.mpi-internal.com/browse/${ticketId}`;
+      const jiraUrl = `${window.location.origin}/browse/${ticketId}`;
 
       const copyLink = document.createElement("a");
       copyLink.href = "#";
@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
           new ClipboardItem({
             "text/plain": new Blob([ticketTitle], { type: "text/plain" }),
             "text/html": new Blob(
-              [`:jira: <a href="${jiraUrl}">(${ticketId}) ${ticketTitle}</a>`],
+              [`jira_1 <a href="${jiraUrl}">(${ticketId}) ${ticketTitle}</a>`],
               { type: "text/html" }
             ),
           }),
