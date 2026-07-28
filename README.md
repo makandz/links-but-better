@@ -7,7 +7,7 @@ A raw URL
 https://github.com/owner/repo/pull/123  
 
 **After:**  
-:git_pr: My Cool Feature (123)
+:git_pr: My Cool Feature
 
 ## Features
 
@@ -16,7 +16,7 @@ This bookmarklet (or Arc Boost) works on GitHub pull requests and Jira tickets. 
 **GitHub**
 
 ```
-:git_pr: {PR_NAME} ({PR_ID})
+:git_pr: {PR_NAME}
 ```
 
 **Jira**

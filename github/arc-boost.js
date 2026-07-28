@@ -5,8 +5,6 @@ document.addEventListener("DOMContentLoaded", () => {
       document.querySelector(".prc-PageHeader-Title-p0Mgh");
 
     const prTitle = h1?.querySelector("span.markdown-title")?.innerText?.trim();
-    const prId = h1?.querySelector("span.pl-2")?.innerText?.trim() || "#????";
-
     const firstDivInSidebar = document.querySelector(
       "#partial-discussion-sidebar div"
     );
@@ -34,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
           new ClipboardItem({
             "text/plain": new Blob([url], { type: "text/plain" }),
             "text/html": new Blob(
-              [`:git_pr: <a href="${url}">${prTitle} (${prId})</a>`],
+              [`:git_pr: <a href="${url}">${prTitle}</a>`],
               { type: "text/html" }
             ),
           }),
