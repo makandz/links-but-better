@@ -9,17 +9,13 @@ javascript:(() => {
     return;
   }
 
-  const prId =
-    h1?.querySelector("span.pl-2")?.innerText?.trim() ||
-    "#????";
-
   const url = window.location.href;
 
   const clipboardData = [
     new ClipboardItem({
       "text/plain": new Blob([url], { type: "text/plain" }),
       "text/html": new Blob(
-        [`:git_pr: <a href="${url}">${prTitle} (${prId})</a>`],
+        [`:git_pr: <a href="${url}">${prTitle}</a>`],
         { type: "text/html" }
       ),
     }),
