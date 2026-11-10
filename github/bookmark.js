@@ -1,7 +1,8 @@
 javascript:(() => {
   const h1 =
     document.querySelector('h1[data-component="PH_Title"]') ||
-    document.querySelector(".prc-PageHeader-Title-p0Mgh");
+    document.querySelector(".prc-PageHeader-Title-p0Mgh") ||
+    document.querySelector('[data-component="TitleArea"] h1');
 
   const prTitle = h1?.querySelector("span.markdown-title")?.innerText?.trim();
   if (!prTitle) {
