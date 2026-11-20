@@ -1,10 +1,7 @@
 javascript:(() => {
-  const h1 =
-    document.querySelector('h1[data-component="PH_Title"]') ||
-    document.querySelector(".prc-PageHeader-Title-p0Mgh") ||
-    document.querySelector('[data-component="TitleArea"] h1');
-
-  const prTitle = h1?.querySelector("span.markdown-title")?.innerText?.trim();
+  const prTitle = document
+    .querySelector('h1 .markdown-title, h1 [class*="markdownTitle"]')
+    ?.innerText?.trim();
   if (!prTitle) {
     alert("Failed to copy. Ensure you're on the GitHub PR page. If it's still not working, see if there's an update to the bookmarklet.");
     return;

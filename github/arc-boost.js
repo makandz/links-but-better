@@ -1,11 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
   const observer = new MutationObserver(() => {
-    const h1 =
-      document.querySelector('h1[data-component="PH_Title"]') ||
-      document.querySelector(".prc-PageHeader-Title-p0Mgh") ||
-      document.querySelector('[data-component="TitleArea"] h1');
-
-    const prTitle = h1?.querySelector("span.markdown-title")?.innerText?.trim();
+    const prTitle = document
+      .querySelector('h1 .markdown-title, h1 [class*="markdownTitle"]')
+      ?.innerText?.trim();
     const firstDivInSidebar =
       document.querySelector("#partial-discussion-sidebar div") ||
       document.querySelector('[data-testid="sticky-sidebar"]');
